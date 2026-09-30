@@ -1,0 +1,23 @@
+# Ghostty config. Installed as a symlink by install.sh.
+# Reload after editing: cmd+shift+,
+
+# --- herdr shortcuts (iTerm-style) ---
+# herdr's prefix is ctrl+b, which is the byte \x02.
+# Each Cmd key sends the prefix plus a herdr key, so herdr handles the split/tab
+# instead of Ghostty making its own.
+
+# cmd+d: split side by side (new pane on the right)
+keybind = super+d=text:\x02v
+# cmd+shift+d: split top and bottom
+keybind = super+shift+d=text:\x02-
+# cmd+t: new herdr tab
+keybind = super+t=text:\x02c
+# cmd+w: close the herdr pane. WARNING: kills whatever runs in it, agents included.
+keybind = super+w=text:\x02x
+
+# cmd+s: send ctrl+s (save in micro). Needs `setopt noflowcontrol` in zsh.
+keybind = super+s=text:\x13
+
+# Deliberately not mapped:
+# cmd+z stays Ghostty undo. Mapping it to ctrl+z would suspend Claude Code/Codex.
+# cmd+c / cmd+v stay Ghostty copy and paste.
