@@ -1,5 +1,10 @@
 onboarding = false
 
+# Fewer boxes: one thin divider between panes instead of a frame around each.
+[ui]
+pane_outer_borders = false
+pane_gaps = false
+
 [ui.toast]
 delivery = "terminal"
 
