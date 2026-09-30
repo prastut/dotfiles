@@ -5,7 +5,7 @@
 It rests on four points:
 
 1. **Your muscle memory keeps working.** cmd+d, cmd+t, cmd+w, cmd+1…9 do in herdr what they did in iTerm, and cmd+c / cmd+z work inside micro.
-2. **It is easy on the eyes.** A calm light theme framed by dark chrome and a clean font, tuned for keratoconus: no halos, one muted accent.
+2. **The look is saved, not forced.** Default dark today; a keratoconus-tuned light setup is one command away.
 3. **Setup takes one command.** Clone the repo and run `install.sh`; it backs up anything it replaces.
 4. **The limits are small and known.** There are a few edge cases, each with a simple fix, and undo takes five steps.
 
@@ -51,32 +51,23 @@ These are left alone on purpose:
 - **cmd+z** is never turned into ctrl+z, which would suspend Claude Code, Codex and other programs. It undoes only inside micro, via micro's own bindings.
 - **cmd+c / cmd+v** stay Ghostty's copy and paste.
 
-## 2. It is easy on the eyes
+## 2. The look is saved, not forced
 
-Tuned for keratoconus, where light scatters and bright text on dark backgrounds halos.
+The current look is Ghostty's default dark theme with herdr's `tokyo-night`.
 
-| Choice | Setting | Why |
-|---|---|---|
-| Dark text on light | Ghostty `Catppuccin Latte` | Dark-on-light removed the halos that even soft dark themes left |
-| Dark chrome, light canvas | herdr `catppuccin`, softened to Frappé tones (`#292c3c`, text `#b5bfe2`) | Sidebar and tab bar frame the panes, giving depth; only short labels are light-on-dark |
-| Soft text colour | Latte's `#4c4f69` on `#eff1f5` | No pure black on pure white, less glare |
-| One muted accent | herdr `accent = "#7287fd"` (lavender) | Teal was too loud; fallback is slate `#5c5f77` |
-| Clean font | SF Mono, 14pt, 20% extra line height | Apple's system monospace: calm, open letters. Atkinson Hyperlegible Mono was more legible but felt clunky |
-| Thin strokes | `font-thicken = false` | Heavier strokes gave off more light and more halo |
-| Edge to edge | no window padding; leftover pixels take the nearest cell's colour | No light strip around herdr's dark chrome |
-| Surfaces, not boxes | herdr `pane_outer_borders = false`, `pane_gaps = false` | One thin divider between panes instead of a frame around each |
+A keratoconus-tuned light setup (Catppuccin Latte, dark herdr chrome, SF Mono 14pt, no pane frames, edge to edge) is saved under the git tag `light-theme`. To bring it back:
 
-Dark (Gruvbox Dark, softened) and warm light (Gruvbox Light) alternatives are commented out in `ghostty/config.ghostty`.
+```sh
+cd ~/Dev/dotfiles
+git checkout light-theme -- ghostty/config.ghostty herdr/config.toml
+herdr server reload-config   # then cmd+shift+, in Ghostty
+```
 
-Not in this repo, set by hand:
-
-- Claude Code: `/theme` → **Light mode (ANSI colors only)**, so it uses the terminal palette.
-- micro: `ctrl+e`, `set colorscheme simple`, so it follows Ghostty's colours.
+It needs `brew install --cask font-sf-mono`, and in Claude Code `/theme` → Light mode (ANSI colors only).
 
 ## 3. Setup takes one command
 
 ```sh
-brew install --cask font-sf-mono   # asks for your Mac password
 git clone https://github.com/prastut/dotfiles.git ~/Dev/dotfiles
 ~/Dev/dotfiles/install.sh
 ```

@@ -1,37 +1,9 @@
 # Ghostty config. Installed as a symlink by install.sh.
 # Reload after editing: cmd+shift+,
 
-# --- Readability (keratoconus-friendly) ---
-# Light mode: dark-on-light removed the halos. Catppuccin Latte is a cool
-# grey-white with softer text (#4c4f69) than Gruvbox, and herdr has a matching theme.
-theme = Catppuccin Latte
-
-# Warm alternative (felt like a desert):
-# theme = Gruvbox Light
-# background = #f2e5bc
-
-# Dark mode, to switch back: comment out the theme line above, uncomment below.
-# theme = Gruvbox Dark
-# foreground = #d5c4a1
-# background = #32302f
-
-# Apple's monospace, same family as the macOS system font: calm and clean.
-# Install: brew install --cask font-sf-mono (asks for your Mac password)
-# Tried: Atkinson Hyperlegible Mono (most legible, clunky vibe), Geist Mono, Monaspace Argon.
-font-family = SF Mono
-
-# True edge to edge: no padding, and the leftover pixels (window size is rarely an
-# exact multiple of the cell size) take the colour of the nearest cell, so herdr's
-# dark sidebar and tab bar reach the window edge instead of a light strip.
-window-padding-x = 0
-window-padding-y = 0
-window-padding-color = extend-always
-
-# Text size and extra space between lines.
-font-size = 14
-adjust-cell-height = 20%
-# Off: thicker strokes gave off more light and made halos worse.
-font-thicken = false
+# --- Look ---
+# Ghostty defaults (dark). The keratoconus-tuned light setup is saved under the
+# git tag `light-theme`: git show light-theme:ghostty/config.ghostty
 
 # --- herdr shortcuts (iTerm-style) ---
 # herdr's prefix is ctrl+b, which is the byte \x02.
