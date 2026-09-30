@@ -5,7 +5,7 @@
 It rests on four points:
 
 1. **Your muscle memory keeps working.** cmd+d, cmd+t, cmd+w, cmd+1…9 do in herdr what they did in iTerm, and cmd+c / cmd+z work inside micro.
-2. **It is easy on the eyes.** A calm light theme and a low-vision font, tuned for keratoconus: no halos, one muted accent.
+2. **It is easy on the eyes.** A calm light theme framed by dark chrome and a clean font, tuned for keratoconus: no halos, one muted accent.
 3. **Setup takes one command.** Clone the repo and run `install.sh`; it backs up anything it replaces.
 4. **The limits are small and known.** There are a few edge cases, each with a simple fix, and undo takes five steps.
 
@@ -61,9 +61,10 @@ Tuned for keratoconus, where light scatters and bright text on dark backgrounds 
 | Dark chrome, light canvas | herdr `catppuccin`, softened to Frappé tones (`#292c3c`, text `#b5bfe2`) | Sidebar and tab bar frame the panes, giving depth; only short labels are light-on-dark |
 | Soft text colour | Latte's `#4c4f69` on `#eff1f5` | No pure black on pure white, less glare |
 | One muted accent | herdr `accent = "#7287fd"` (lavender) | Teal was too loud; fallback is slate `#5c5f77` |
-| Low-vision font | Atkinson Hyperlegible Mono, 15pt, 20% extra line height | Similar letters (l 1 I, 0 O) are shaped distinctly |
+| Clean font | SF Mono, 14pt, 20% extra line height | Apple's system monospace: calm, open letters. Atkinson Hyperlegible Mono was more legible but felt clunky |
 | Thin strokes | `font-thicken = false` | Heavier strokes gave off more light and more halo |
-| Edge to edge | no window padding | Preferred over padded layouts |
+| Edge to edge | no window padding; leftover pixels take the nearest cell's colour | No light strip around herdr's dark chrome |
+| Surfaces, not boxes | herdr `pane_outer_borders = false`, `pane_gaps = false` | One thin divider between panes instead of a frame around each |
 
 Dark (Gruvbox Dark, softened) and warm light (Gruvbox Light) alternatives are commented out in `ghostty/config.ghostty`.
 
@@ -75,7 +76,7 @@ Not in this repo, set by hand:
 ## 3. Setup takes one command
 
 ```sh
-brew install --cask font-atkinson-hyperlegible-mono
+brew install --cask font-sf-mono   # asks for your Mac password
 git clone https://github.com/prastut/dotfiles.git ~/Dev/dotfiles
 ~/Dev/dotfiles/install.sh
 ```

@@ -15,12 +15,20 @@ theme = Catppuccin Latte
 # foreground = #d5c4a1
 # background = #32302f
 
-# Designed for low vision: similar letters (l 1 I, 0 O) are clearly distinct.
-# Install: brew install --cask font-atkinson-hyperlegible-mono
-font-family = Atkinson Hyperlegible Mono
+# Apple's monospace, same family as the macOS system font: calm and clean.
+# Install: brew install --cask font-sf-mono (asks for your Mac password)
+# Tried: Atkinson Hyperlegible Mono (most legible, clunky vibe), Geist Mono, Monaspace Argon.
+font-family = SF Mono
 
-# Bigger text, more space between lines.
-font-size = 15
+# True edge to edge: no padding, and the leftover pixels (window size is rarely an
+# exact multiple of the cell size) take the colour of the nearest cell, so herdr's
+# dark sidebar and tab bar reach the window edge instead of a light strip.
+window-padding-x = 0
+window-padding-y = 0
+window-padding-color = extend-always
+
+# Text size and extra space between lines.
+font-size = 14
 adjust-cell-height = 20%
 # Off: thicker strokes gave off more light and made halos worse.
 font-thicken = false
