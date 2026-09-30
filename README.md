@@ -57,7 +57,8 @@ Tuned for keratoconus, where light scatters and bright text on dark backgrounds 
 
 | Choice | Setting | Why |
 |---|---|---|
-| Dark text on light | Ghostty `Catppuccin Latte`, herdr `catppuccin-latte` | Dark-on-light removed the halos that even soft dark themes left |
+| Dark text on light | Ghostty `Catppuccin Latte` | Dark-on-light removed the halos that even soft dark themes left |
+| Dark chrome, light canvas | herdr `catppuccin`, softened to Frappé tones (`#292c3c`, text `#b5bfe2`) | Sidebar and tab bar frame the panes, giving depth; only short labels are light-on-dark |
 | Soft text colour | Latte's `#4c4f69` on `#eff1f5` | No pure black on pure white, less glare |
 | One muted accent | herdr `accent = "#7287fd"` (lavender) | Teal was too loud; fallback is slate `#5c5f77` |
 | Low-vision font | Atkinson Hyperlegible Mono, 15pt, 20% extra line height | Similar letters (l 1 I, 0 O) are shaped distinctly |

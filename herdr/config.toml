@@ -4,9 +4,15 @@ onboarding = false
 delivery = "terminal"
 
 [theme]
-name = "catppuccin-latte"
+name = "catppuccin"
 auto_switch = false
 
-# One accent: Latte lavender. Teal was too loud; slate (#5c5f77) is the quieter fallback.
+# Dark chrome, light canvas: herdr uses dark Catppuccin, softened to Frappé tones,
+# for depth and personality. Pane content stays light via Ghostty (Latte), halo-free.
 [theme.custom]
 accent = "#7287fd"
+sidebar_bg = "#292c3c"
+panel_bg = "#292c3c"
+active_row_bg = "#414559"
+selection_bg = "#414559"
+text = "#b5bfe2"
