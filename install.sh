@@ -25,6 +25,9 @@ link() {
 link "$DOTFILES/ghostty/config.ghostty" \
   "$HOME/Library/Application Support/com.mitchellh.ghostty/config.ghostty"
 
+# micro: cmd+c copy and cmd+z undo (see README)
+link "$DOTFILES/micro/bindings.json" "$HOME/.config/micro/bindings.json"
+
 # zsh: add one source line to ~/.zshrc instead of replacing it
 ZSHRC="$HOME/.zshrc"
 LINE="source \"$DOTFILES/zsh/herdr.zsh\""
