@@ -28,6 +28,9 @@ link "$DOTFILES/ghostty/config.ghostty" \
 # micro: cmd+c copy and cmd+z undo (see README)
 link "$DOTFILES/micro/bindings.json" "$HOME/.config/micro/bindings.json"
 
+# herdr: theme and colours (see README)
+link "$DOTFILES/herdr/config.toml" "$HOME/.config/herdr/config.toml"
+
 # zsh: add one source line to ~/.zshrc instead of replacing it
 ZSHRC="$HOME/.zshrc"
 LINE="source \"$DOTFILES/zsh/herdr.zsh\""

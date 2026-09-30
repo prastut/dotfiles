@@ -1,6 +1,30 @@
 # Ghostty config. Installed as a symlink by install.sh.
 # Reload after editing: cmd+shift+,
 
+# --- Readability (keratoconus-friendly) ---
+# Light mode: dark-on-light removed the halos. Catppuccin Latte is a cool
+# grey-white with softer text (#4c4f69) than Gruvbox, and herdr has a matching theme.
+theme = Catppuccin Latte
+
+# Warm alternative (felt like a desert):
+# theme = Gruvbox Light
+# background = #f2e5bc
+
+# Dark mode, to switch back: comment out the theme line above, uncomment below.
+# theme = Gruvbox Dark
+# foreground = #d5c4a1
+# background = #32302f
+
+# Designed for low vision: similar letters (l 1 I, 0 O) are clearly distinct.
+# Install: brew install --cask font-atkinson-hyperlegible-mono
+font-family = Atkinson Hyperlegible Mono
+
+# Bigger text, more space between lines.
+font-size = 15
+adjust-cell-height = 20%
+# Off: thicker strokes gave off more light and made halos worse.
+font-thicken = false
+
 # --- herdr shortcuts (iTerm-style) ---
 # herdr's prefix is ctrl+b, which is the byte \x02.
 # Each Cmd key sends the prefix plus a herdr key, so herdr handles the split/tab

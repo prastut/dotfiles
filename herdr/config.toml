@@ -1,0 +1,12 @@
+onboarding = false
+
+[ui.toast]
+delivery = "terminal"
+
+[theme]
+name = "catppuccin-latte"
+auto_switch = false
+
+# One accent: Latte lavender. Teal was too loud; slate (#5c5f77) is the quieter fallback.
+[theme.custom]
+accent = "#7287fd"
